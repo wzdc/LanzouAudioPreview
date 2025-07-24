@@ -1,10 +1,36 @@
 // ==UserScript==
 // @name         蓝奏云音频预览
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/wzdc/LanzouAudioPreview
 // @version      0.1
-// @description  蓝奏云在线预览音频文件
-// @author
+// @description  在线预览蓝奏云文件夹内音频文件
+// @author       wzdc
+// @match        https://*.lanzoux.com/*
 // @match        https://*.lanzoui.com/*
+// @match        https://*.lanzouw.com/*
+// @match        https://*.lanzouo.com/*
+// @match        https://*.lanzouq.com/*
+// @match        https://*.lanzouj.com/*
+// @match        https://*.lanzouv.com/*
+// @match        https://*.lanzoug.com/*
+// @match        https://*.lanzoul.com/*
+// @match        https://*.lanzouy.com/*
+// @match        https://*.lanzout.com/*
+// @match        https://*.lanzoup.com/*
+// @match        https://*.lanzoub.com/*
+// @match        https://*.lanzouf.com/*
+// @match        https://*.lanzoum.com/*
+// @match        https://*.lanzouh.com/*
+// @match        https://*.lanzouu.com/*
+// @match        https://*.lanzouk.com/*
+// @match        https://*.lanzouc.com/*
+// @match        https://*.lanzoue.com/*
+// @match        https://*.lanzov.com/*
+// @match        https://*.lanzn.com/*
+// @match        https://*.lanpv.com/*
+// @match        https://*.lanpw.com/*
+// @match        https://*.lanzb.com/*
+// @match        https://*.lanwp.com/*
+// @updateURL    https://raw.githubusercontent.com/wzdc/LanzouAudioPreview/refs/heads/main/LanzouAudioPreview.user.js
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==
