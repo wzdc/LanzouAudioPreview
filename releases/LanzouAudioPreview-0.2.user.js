@@ -114,7 +114,7 @@
         }
     }
 
-    if(typeof pgs === 'undefined' || document.getElementById("sub") === null) { // 早于网页加载（或有密码）
+    if(typeof pgs === 'undefined' || document.getElementById("sub") !== null) { // 早于网页加载（或有密码）
     } else if(document.getElementById("load2").style.display == "none") { // 已经加载完成
         DOMGetFileList();
     } else { // 未完成加载
@@ -245,8 +245,8 @@ async function PlayAudio() {
     const data = ap.list.audios[currentIndex];
 
     try {
-        const res = await fetch('https://vercel-chi-kohl.vercel.app/lanzouyunapi.php', {
-            method: 'GET',
+        const res = await fetch('https://39.99.237.243:7003/lanzou/index.php', {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
