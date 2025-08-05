@@ -67,7 +67,7 @@
                     data.text.forEach(function(song, index) {
                         if(song.t == 0 && song.id != -1  && (song.icon == "mp3" || song.icon == "flac")) {
                             musiclist.push({
-                                id: "httpsl://www.lanzoui.com/" + song.id, // ID
+                                id: window.location.origin + "/" + song.id, // ID
                                 name: parser.parseFromString(song.name_all, "text/html").documentElement.textContent, // 音乐标题
                                 ...apaudio,
                             });
@@ -245,12 +245,12 @@ async function PlayAudio() {
     const data = ap.list.audios[currentIndex];
 
     try {
-        const res = await fetch('https://lz.qaiu.top/json/parser', { // 你的服务器地址
+        const res = await fetch('https://lz.qaiu.top/json/parser?url=' + encodeURIComponent(data.id), { // 你的服务器地址
             method: 'GET',
-            headers: {
+            /*headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: 'url=' + encodeURIComponent(data.id) // 请求参数
+            body: 'url=' + encodeURIComponent(data.id) // POST 请求参数*/
         });
         const response = await res.json();
         if(response.code != 200) return false; // 成功状态码
